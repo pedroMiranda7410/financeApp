@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+.sidebar-divider-right {
+  position: relative;
+
+}
+
+.sidebar-divider-right::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  width: 1px;
+  height: 48px;
+  bottom: 10px;
+  background: rgba(0, 0, 0, 0.15);
+
+}
+
+.text-wallet {
+  color: #806520 !important;
+}
+
+a.text-wallet:hover, a.text-wallet:focus {
+  color: #c89e32 !important;
+}
+
+.bg-login-image-wallet {
+  background: url("https://source.unsplash.com/6-cxfA4MKpk/600x800/");
+  background-position: center;
+  background-size: cover;
+}
+
+.bg-register-image-wallet {
+  background: url("https://source.unsplash.com/lZ_4nPFKcV8/600x800/");
+  background-position: center;
+  background-size: cover;
+}
+
+
+.bg-gradient-wallet {
+  background-color: #c89e32;
+  background-image: linear-gradient(180deg, #c89e32 10%, #806520 100%);
+  background-size: cover;
+}
+
+ .btn-wallet {
+    color: #fff !important;
+    background: #806520 !important;
+    background-color: #806520;
+    border-color: #806520;
+  }
+
+  .btn-wallet:hover {
+    color: #fff;
+    background-color: #c89e32;
+    border-color: #9e7c25;
+  }
+  
+  .btn-wallet:focus, .btn-wallet.focus {
+    color: #fff;
+    background-color: #c89e32;
+    border-color: #c89e32;
+    box-shadow: 0 0 0 0.2rem rgba(228, 205, 105, 0.5);
+  }
+  
+  .btn-wallet.disabled, .btn-wallet:disabled {
+    color: #fff;
+    background-color: #806520;
+    border-color: #806520;
+  }
+  
+  .btn-wallet:not(:disabled):not(.disabled):active, .btn-wallet:not(:disabled):not(.disabled).active,
+  .show > .btn-wallet.dropdown-toggle {
+    color: #fff;
+    background-color: #c89e32;;
+    border-color: #9e7c25;
+  }
+  
+  .btn-wallet:not(:disabled):not(.disabled):active:focus, .btn-wallet:not(:disabled):not(.disabled).active:focus,
+  .show > .btn-wallet.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem rgba(228, 205, 105, 0.5);
+  }
+  
+.movement-type-option {
+  position: relative;
+}
+
+.movement-type-option::before {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: black;
+  left: 1px;
+  top: 1px;
+}

@@ -1,0 +1,2 @@
+module EarningHelper
+end

@@ -1,0 +1,23 @@
+<% if defined?(radioButtonSubType) && radioButtonSubType == false %>
+$('#<%= movementTypeTitle == 'ganho' ? 'earning' : 'expense' %>SubTypeSelect').find('option')
+    .remove()
+    .end()
+    .append(`
+        <option value="0">Selecione a relação ao tipo...</option>
+        <% SubType.where(movement_type_id: movementTypeId).each do |s| %>
+            <option value="<%= s.id %>"><%= s.title %></option>
+        <% end %>
+    `)
+    .val('0');
+<% elsif defined?(radioButtonSubType) && radioButtonSubType == true %>
+    $("#subTypeSelect").find('option')
+    .remove()
+    .end()
+    .append(`
+        <option value="0">Selecione a relação ao tipo ...</option>
+        <% MovementType.where(pointer_type: "#{movementTypeTitle}").each do |t| %>
+            <option value="<%= t.id %>"><%= t.title %></option>
+        <% end %>
+    `)
+    .val('0');
+<% end %>
